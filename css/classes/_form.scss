@@ -1,0 +1,66 @@
+.wpcf7-not-valid-tip{ display: none!important;}
+.wpcf7-response-output{
+    position: absolute;
+    padding: 1vw;
+    border-radius: 0.7vw;
+    box-shadow: -16px 17px 6px #0000009e;
+    font-size: 0.76vw;
+    line-height: 1.5vw;
+    text-align: center;
+    width: 9vw!important;
+    left: -8vw!important;
+    padding: 1vw !important;
+    border: 1px solid lighten($cor1,20%)!important;
+    font-weight: bold;
+}
+
+
+
+@mixin ContainerQuery($selector) {
+    #{$selector} {
+        //border: 1px  solid rgb(110, 245, 0);
+        container-type: inline-size;
+    }
+
+    /****************************************************/
+    @container (min-width: 400.50px) and (max-width: 600px) {
+        #{$selector} {
+            //label{  }
+        }
+    }
+    /****************************************************/
+
+   
+
+    /****************************************************/
+    @container (max-width: 400px) {
+        #{$selector} {
+            height: auto;
+            border: 1px  solid rgb(255, 0, 0);
+            label {
+                display: flex;
+                max-width: 97% !important;
+                overflow-x: hidden;
+                white-space: nowrap;
+                flex-direction: row;
+                padding: 0px;
+                height: auto;
+                
+                justify-content: flex-end;
+                align-items: center;
+
+                span {
+                    max-width: 70% !important;
+                    position: relative;
+                    
+                    input {
+                        max-width: 99.9% !important;
+                        border: 0.09765625vw solid rgb(229, 255, 0);
+                        border-radius: 3.66015625vw;  
+                    }
+                }
+            }
+        }
+    }
+    /****************************************************/
+}

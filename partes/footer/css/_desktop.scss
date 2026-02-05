@@ -1,0 +1,19 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    footer {
+        position: absolute;
+        top: vw.vw(1872);
+        left: vw.vw(0);
+        width: vw.vw(1000);
+        height: vw.vw(238.96);
+        background-color: cores.$cor1;
+    }
+}

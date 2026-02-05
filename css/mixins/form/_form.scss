@@ -1,0 +1,54 @@
+@import "./../../cores/cores";
+
+@mixin formulario() {
+    p {
+        @include paragrafo();
+    }
+
+    @content;
+}
+
+@mixin paragrafo() {
+    margin-bottom: 1.693359375vw;
+    label {
+        @include label();
+    }
+}
+
+@mixin label() {
+    width: 100%;
+    input {
+        @include input();
+    }
+    textarea {
+        @include input();
+        @include textarea();
+    }
+}
+
+@mixin input() {
+    @media screen and (max-width: 768px) {
+        padding: 4vw;
+        height: 3.4677734375vw;
+        width: 100%;
+        font-size: 4vw;
+        color: $cor1;
+        border: 0.0810546875vw solid $cor1;
+        background-color: white;
+    }
+    
+    @media screen and (min-width: 769px) {
+        padding: 0.806640625vw;
+        height: 3.4677734375vw;
+        width: 100%;
+        font-size: 1.8544921875vw;
+        color: $cor1;
+        border: 0.0810546875vw solid $cor1;
+        background-color: white;
+    }
+}
+
+@mixin textarea() {
+    @media screen and (max-width: 768px) {   height: 30vh;}
+    @media screen and (min-width: 769px) {   height: 6.93359375vw;}
+}

@@ -1,0 +1,89 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    @keyframes hoverDifServicos {
+        0% {
+            background-color: cores.$cor2;
+            z-index: 20;
+            transform: none;
+            color: cores.$cor1;
+        }
+        100% {
+            background-color: lighten(adjust-hue(cores.$cor2, -25deg), 1%);
+            z-index: 30;
+            $x: vw.vw(20);
+            $x2: vw.vw(1);
+            color: lighten(cores.$cor2, 40%);
+        }
+    }
+
+    #imagemFundoTela {
+        position: absolute;
+        z-index: 7;
+        top: 31.637vw;
+        left: vw.vw(46.89);
+        width: vw.vw(908.13);
+    }
+
+    #servicos {
+        z-index: 20;
+        font-family: "font1";
+        margin-top: vw.vw(35.95);
+        z-index: 2000;
+        width: vw.vw(696.91);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        h2 {
+            color: cores.$cor1;
+            font-size: vw.vw(21.99);
+            font-weight: bold;
+            margin-bottom: vw.vw(29.28);
+        }
+        ul {
+            display: flex;
+            flex-direction: line;
+            gap: vw.vw(18.11);
+            margin-bottom: vw.vw(70.93);
+            li {
+                min-height: vw.vw(120.69);
+                border-radius: vw.vw(2.54);
+                background-color: cores.$cor2;
+                $xx: vw.vw(5.08);
+                box-shadow: $xx $xx #00000093;
+                width: vw.vw(160.65);
+                display: flex;
+                gap: vw.vw(4.31);
+                padding-left: vw.vw(11.67);
+                padding-right: vw.vw(11.67);
+                padding-top: vw.vw(16.24);
+                padding-bottom: vw.vw(16.24);
+                flex-direction: column;
+                color: cores.$cor1;
+                display: flex;
+                align-items: center;
+                font-size: vw.vw(10.71);
+                line-height: 143%;
+                h3,
+                p {
+                    text-align: center;
+                }
+                img {
+                    width: vw.vw(55.58);
+                    height: vw.vw(55.58);
+                }
+
+                &:hover {
+                    animation: "hoverDifServicos" 300ms forwards;
+                }
+            }
+        }
+    }
+}

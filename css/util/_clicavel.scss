@@ -1,0 +1,76 @@
+.clicavel{
+    position: relative;
+    overflow: hidden;
+}
+
+
+.filho-clonado {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 104%;
+    width: 104%;    
+    
+    a,.btn{
+      position: absolute;  
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: btnShow 1300ms forwards 1000ms; 
+      border: 1px solid white;
+    }
+    &:hover { animation: animationClicavel 300ms forwards; }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+/********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+@keyframes btnShow{
+    0%{
+        top:0;
+        opacity: 0;   
+    }
+    100%{
+        top: 50%;
+        opacity: 1;  
+    }
+}
+/********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+/********************************************/
+@keyframes animationClicavel {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+        transform: scale(1);
+        opacity: 0;
+    }
+    
+    30%{opacity: 1;}
+
+    100% {
+
+        transform: scale(1);
+        opacity: 0.9;
+        border-radius:1vw;
+    }
+}
+ 

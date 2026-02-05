@@ -1,0 +1,20 @@
+@import "../cores/cores";
+
+body::-webkit-scrollbar {
+  width: 1.0765625vw;               /* Largura da barra vertical */
+  height: 0.9765625vw;              /* Altura da barra horizontal */
+  padding: 0.3vw;
+}
+
+body::-webkit-scrollbar-track {
+  background: $cor2;       /* Cor de fundo da área da barra */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $cor1;          /* Cor da barra de rolagem */
+  border-radius: 0.1765625vw;       /* Cantos arredondados */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+ // background: darken($cor1,10%);          /* Cor ao passar o mouse */
+}   

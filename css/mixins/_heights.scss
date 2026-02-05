@@ -1,0 +1,9 @@
+@mixin AlturaDaDiv() { 
+    @media screen and (min-width: 769px) {
+        min-height: 44.23828125vw;
+    }
+
+    @media screen and (max-width: 768px) {
+        min-height: auto;
+    }
+}

@@ -1,0 +1,67 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    @keyframes thePulse {
+        0% {  background-color: cores.$cor2;  }
+        100% { background-color: adjust-hue(cores.$cor2,-5deg);  }
+    }
+
+    .pulse {
+        animation: thePulse 500ms infinite alternate;
+    }
+
+    #blog {
+        z-index: 20;
+        font-family: "font1";
+        width: vw.vw(696.91);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        h2 {
+            color: cores.$cor1;
+            font-size: vw.vw(21.99);
+            margin-bottom: vw.vw(29.28);
+        }
+
+        ul {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            li {
+                font-size: vw.vw(7.43);
+                color: white;
+                background-color: cores.$cor1;
+                padding: vw.vw(5.68);
+                border-radius: vw.vw(5.68);
+                article {
+                    display: grid;
+                    gap: vw.vw(6);
+                    img {
+                        border: 1px solid cores.$cor2;
+                        width: 100%;
+                        height: auto;
+                        border-radius: vw.vw(4.68);
+                    }
+                    .link {
+                        background-color: cores.$cor2;
+                        padding: vw.vw(3);
+                        color: cores.$cor1;
+                        text-align: center;
+                        border-radius: vw.vw(2.68);
+                    }
+                }
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}

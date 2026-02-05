@@ -1,0 +1,58 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia" as t;
+@use "../../../css/util/_vw.scss";
+@use "../../../css/util/padding_Generico" as p;
+
+@include breakpoints.respond-to(mobile) {
+    #topo {
+        height: auto;
+        overflow: auto;
+        @include p.display();
+        background-image: url(#{c.$url}wp-content/themes/cariocaclean/partes/header/imagens/fundao.webp);
+
+
+        #fundoAzul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: vw.vw(118.78);
+            background: linear-gradient(cores.$cor1, rgba(255, 255, 0, 0));
+        }
+
+        h2{
+            padding: 4vw;
+            color: white;
+            background-color: cores.$cor1;
+            border-radius: 3vw;
+            text-align: center;
+        }
+
+        #logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        #button{
+            display: flex;
+            flex-direction: column;
+            padding-left: 0!important;
+            gap: 3vw;
+            width: 50%;
+            a{
+                @include btn.botao();
+            }
+            a:nth-of-type(1) {
+                background-color: white;
+                color: cores.$cor1;
+            }
+        }
+    }
+}

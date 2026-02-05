@@ -1,0 +1,1206 @@
+html {
+  scroll-behavior: smooth;
+}
+
+iframe {
+  max-width: 99.9vw;
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+body {
+  margin: 0px !important;
+  max-width: 99.8vw !important;
+  overflow-x: clip;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/*******************************************************/
+/*******************************************************/
+/*******************************************************/
+/*******************************************************/
+@keyframes buttonHover {
+  0% {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    box-shadow: 0px 0px 0px rgba(55, 55, 55, 0.5294117647);
+  }
+  100% {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) scale(1.3);
+    box-shadow: 7px 9px 11px rgba(55, 55, 55, 0.5294117647);
+  }
+}
+/*****************************************************/
+@media screen and (max-width: 767px) {
+  /****************************************************************************/
+  @keyframes AbreMenu {
+    0% {
+      opacity: 0.1;
+      left: -100%;
+    }
+    100% {
+      opacity: 1;
+      left: 0vw;
+    }
+  }
+  .LeftToRight {
+    animation: AbreMenu 700ms forwards;
+  }
+  /****************************************************************************/
+  @keyframes monstraBtn {
+    0% {
+      filter: blur(3px);
+      color: yellow;
+      position: relative;
+      opacity: 0;
+      left: -30vw;
+    }
+    100% {
+      position: relative;
+      color: red;
+      left: 0vw;
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+  .mostraBtn {
+    animation: monstraBtn 500ms forwards;
+  }
+  /****************************************************************************/
+  @keyframes fundoMenu {
+    0% {
+      opacity: 0;
+      left: -100vw;
+      -webkit-backdrop-filter: blur(0px) saturate(1);
+              backdrop-filter: blur(0px) saturate(1);
+    }
+    10% {
+      opacity: 1;
+      left: 0vw;
+      -webkit-backdrop-filter: blur(0px) saturate(1);
+              backdrop-filter: blur(0px) saturate(1);
+    }
+    100% {
+      opacity: 1;
+      left: 0vw;
+      -webkit-backdrop-filter: blur(2px) saturate(1.2);
+              backdrop-filter: blur(2px) saturate(1.2);
+    }
+  }
+  .openFundoCSS {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: -100vw;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0);
+    animation: fundoMenu 800ms forwards;
+    z-index: 12000;
+  }
+  /****************************************************************************/
+  #hamburguer {
+    display: block;
+    z-index: 20000;
+    position: fixed;
+    top: 3vw;
+    left: 3vw;
+    padding: 3vw;
+    width: 12vw;
+    height: 12vw;
+    border: 1px solid #0053A3;
+    background-color: white;
+    border-radius: 1vw;
+    box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.504);
+  }
+  #hamburguer img {
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #menu {
+    z-index: 30000;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.643);
+    padding: 4vw;
+    height: 100vh;
+    display: none;
+  }
+  #menu ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw;
+  }
+  #menu ul li {
+    opacity: 0;
+    border: 1px solid #0053A3;
+    padding: 2vw;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 3vw;
+    background-color: white;
+    border-radius: 1vw;
+  }
+  #menu ul li a {
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 501px) and (max-width: 768.5px) {
+  #menu ul li a {
+    font-size: 2.828125vw;
+    text-align: left;
+    line-height: 1.6;
+    font-weight: 100;
+    color: #0053A3;
+    font-family: "open1";
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  #menu ul li a {
+    font-size: 5.328125vw;
+    text-align: left;
+    line-height: 1.7;
+    font-weight: 100;
+    color: #0053A3;
+    font-family: "open1";
+  }
+}
+/*****************************************************/
+/*****************************************************/
+@media screen and (min-width: 767.1px) {
+  #hamburguer {
+    display: none;
+  }
+  #menu {
+    z-index: 30000;
+    position: absolute;
+    left: 0.851vw;
+    top: 2.248vw;
+  }
+  #menu ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1.873vw;
+    padding-top: 0.11vw;
+    padding-bottom: 0.11vw;
+  }
+  #menu ul li {
+    margin-right: 1.763vw;
+  }
+  #menu ul li a {
+    font-size: 0.808vw;
+    font-family: "font4";
+    color: white;
+  }
+}
+/*****************************************************/
+/*****************************************************/
+@media screen and (max-width: 767px) {
+  #redesSociais {
+    height: 12vw;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 800;
+  }
+  #redesSociais ul {
+    background-color: #0053A3;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #redesSociais ul li {
+    background-color: #0053A3;
+  }
+  #redesSociais ul li img {
+    width: 7vw;
+    height: auto;
+  }
+}
+/*****************************************************/
+/*****************************************************/
+@media screen and (min-width: 767.1px) {
+  #redesSociais {
+    z-index: 300;
+    position: absolute;
+    left: 80.488vw;
+    top: 2.084vw;
+  }
+  #redesSociais ul {
+    display: flex;
+    flex-direction: row;
+  }
+  #redesSociais ul li {
+    margin-right: 1.352vw;
+  }
+  #redesSociais ul li a img {
+    width: 1.615vw;
+    height: 1.615vw;
+  }
+  #redesSociais ul li a img:hover {
+    animation: hoverInfo 200ms forwards;
+  }
+}
+/*****************************************************/
+@keyframes hoverInfo {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(5);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*****************************************************/
+@media screen and (max-width: 767px) {
+  picture img {
+    max-width: 99.8%;
+  }
+  body {
+    /***********************************************/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: "thu  thu  thu" "main main main" "lat1 lat1 lat1" "serv serv serv" "fRet fRet fRet" "comp1 comp1 comp1" "pic2 pic2 pic2" "form form form" "map  map  map" "foot foot foot";
+    gap: 0.4vw;
+    align-items: stretch;
+    justify-items: stretch;
+    /***********************************************/
+    /***********************************************/
+    /**************************************************************/
+    /**************************************************************/
+    /**************************************************************/
+    /**************************************************************/
+    /**************************************************************/
+    /**************************************************************/
+  }
+  body * {
+    max-width: 99.5vw;
+  }
+  body #sombra {
+    width: 100vw;
+    height: 10vw;
+    background: linear-gradient(#0053A3, rgba(255, 255, 0, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  body .thumb {
+    grid-area: thu;
+    overflow: hidden;
+  }
+  body .thumb picture {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  body .thumb picture img {
+    height: 100%;
+    width: auto;
+  }
+  body #lateral1 {
+    grid-area: lat1;
+  }
+  body #lateral1 picture {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  body #lateral1 picture img {
+    height: 100%;
+    width: auto;
+  }
+  body #content {
+    grid-area: main;
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    font-family: "open1";
+    color: #0053A3;
+    box-sizing: border-box;
+    display: block;
+    padding: 5vw;
+    text-align: justify;
+    padding: 2vw;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 501px) and (max-width: 768.5px) {
+  body #content {
+    font-size: 2.828125vw;
+    text-align: left;
+    line-height: 1.6;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  body #content {
+    font-size: 5.328125vw;
+    text-align: left;
+    line-height: 1.7;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) {
+  body #content a {
+    color: #0053A3;
+    font-weight: bolder;
+  }
+  body #servicos {
+    grid-area: serv;
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    font-family: "open1";
+    color: #0053A3;
+    box-sizing: border-box;
+    display: block;
+    padding: 5vw;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 501px) and (max-width: 768.5px) {
+  body #servicos {
+    font-size: 2.828125vw;
+    text-align: left;
+    line-height: 1.6;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  body #servicos {
+    font-size: 5.328125vw;
+    text-align: left;
+    line-height: 1.7;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) {
+  body #servicos a {
+    color: #0053A3;
+    font-weight: bolder;
+  }
+  body #servicos h2 {
+    text-align: center;
+  }
+  body #servicos ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+  }
+  body #servicos ul li {
+    width: 35vw;
+    margin: 2vw;
+    display: flex;
+    justify-content: center;
+  }
+  body #servicos ul li img {
+    height: 100%;
+    width: auto;
+  }
+  body #servicos [itemprop=potentialAction] {
+    display: inline-block;
+    background-color: #EAB640;
+    padding: 5vw;
+    width: 90vw;
+    text-align: center;
+    font-weight: bolder;
+    border-radius: 3vw;
+  }
+  body #fotoSalaRetrato {
+    grid-area: fRet;
+  }
+  body #fotoSalaRetrato picture {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  body #fotoSalaRetrato picture img {
+    height: 100%;
+    width: auto;
+  }
+  body #pic2 {
+    grid-area: pic2;
+  }
+  body #pic2 picture {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  body #pic2 picture img {
+    height: 100%;
+    width: auto;
+  }
+  body #complementoCariocaClean {
+    grid-area: comp1;
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    font-family: "open1";
+    color: #0053A3;
+    box-sizing: border-box;
+    display: block;
+    padding: 5vw;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 501px) and (max-width: 768.5px) {
+  body #complementoCariocaClean {
+    font-size: 2.828125vw;
+    text-align: left;
+    line-height: 1.6;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  body #complementoCariocaClean {
+    font-size: 5.328125vw;
+    text-align: left;
+    line-height: 1.7;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) {
+  body #complementoCariocaClean a {
+    color: #0053A3;
+    font-weight: bolder;
+  }
+  body #form {
+    grid-area: form;
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    font-family: "open1";
+    color: #0053A3;
+    box-sizing: border-box;
+    display: block;
+    padding: 5vw;
+    text-align: justify;
+    /*************************************************************/
+    /*************************************************************/
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 501px) and (max-width: 768.5px) {
+  body #form {
+    font-size: 2.828125vw;
+    text-align: left;
+    line-height: 1.6;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  body #form {
+    font-size: 5.328125vw;
+    text-align: left;
+    line-height: 1.7;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) {
+  body #form a {
+    color: #0053A3;
+    font-weight: bolder;
+  }
+  body #form form p label span {
+    max-width: 99%;
+  }
+  body #form form p label span input {
+    max-width: 98%;
+    border: 1px solid #0053A3;
+    height: 12vw;
+    border-radius: 2vw;
+    padding-left: 2vw;
+  }
+  body #form form p .wpcf7-submit {
+    margin-top: 10vw;
+    border: 1px solid #0053A3;
+    background-color: #0053A3;
+    color: white;
+    padding: 5vw;
+    width: 100%;
+    border-radius: 3vw;
+  }
+  body #map {
+    grid-area: map;
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    /*****************************************************************/
+    font-family: "open1";
+    color: #0053A3;
+    box-sizing: border-box;
+    display: block;
+    padding: 5vw;
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 501px) and (max-width: 768.5px) {
+  body #map {
+    font-size: 2.828125vw;
+    text-align: left;
+    line-height: 1.6;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 500px) {
+  body #map {
+    font-size: 5.328125vw;
+    text-align: left;
+    line-height: 1.7;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width: 767px) {
+  body #map a {
+    color: #0053A3;
+    font-weight: bolder;
+  }
+  body #map iframe {
+    width: 100%;
+  }
+  body footer {
+    grid-area: foot;
+    background-color: #0053A3;
+    height: 30vh;
+  }
+}
+/*****************************************************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*********************/
+/*****************************************************/
+@media screen and (min-width: 767.1px) {
+  body {
+    /***********************************************/
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: "thu  thu  thu  thu  thu  thu  thu  thu  thu  thu" "lat1 lat1 main main main main main main main main" "serv serv serv serv serv serv serv serv fRet fRet" "pic2 pic2 comp1 comp1 comp1 comp1 comp1 comp1 fRet fRet" "pic2 pic2 form  form  form  form  form  form  form  form" "map  map  map  map  map  map  map  map  map  map" "foot foot foot foot foot foot foot foot foot foot";
+    gap: 0.3vw;
+    align-items: stretch;
+    justify-items: stretch;
+    width: 99.98%;
+    max-width: 100vw;
+    /***********************************************/
+    /***********************************************/
+    /**************************************************************/
+    /**************************************************************/
+    /**************************************************************/
+    /**************************************************************/
+    /**************************************************************/
+    /**************************************************************/
+  }
+  body #sombra {
+    width: 99.98%;
+    height: 10vw;
+    background: linear-gradient(#0053A3, rgba(255, 255, 0, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  body .thumb {
+    grid-area: thu;
+    height: 37.065vw;
+    width: 100%;
+    overflow: hidden;
+  }
+  body .thumb picture {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  body .thumb picture img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+  }
+  body #lateral1 {
+    grid-area: lat1;
+    height: 32.09vw;
+    width: 26.104vw;
+    height: 100%;
+  }
+  body #lateral1 picture {
+    display: block;
+    height: 100%;
+    max-width: 99%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.3vw;
+  }
+  body #lateral1 picture img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translatex(-50%);
+  }
+  body #content {
+    grid-area: main;
+    overflow: visible;
+    padding-left: 2.633vw;
+    padding-right: 2.633vw;
+    font-family: "open1";
+    line-height: 165%;
+    color: #0053A3;
+    font-size: 0.886vw;
+    border: 0.02vw solid grey;
+    position: relative;
+    overflow: auto;
+    height: auto;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  body #content a,
+  body #content b,
+  body #content strong {
+    color: rgb(0, 94.36400818, 112);
+    font-family: "open2";
+  }
+  body #content h1 {
+    margin-top: 2.033vw;
+  }
+  body #content [itemprop=articleBody] {
+    margin-top: 4.051vw;
+  }
+  body #servicos {
+    grid-area: serv;
+    height: 27.506vw;
+    font-family: "open1";
+    line-height: 165%;
+    color: #0053A3;
+    font-size: 0.886vw;
+    border: 0.02vw solid grey;
+    position: relative;
+    overflow: auto;
+    height: auto;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  body #servicos a,
+  body #servicos b,
+  body #servicos strong {
+    color: rgb(0, 94.36400818, 112);
+    font-family: "open2";
+  }
+  body #fotoSalaRetrato {
+    grid-area: fRet;
+  }
+  body #fotoSalaRetrato picture {
+    display: block;
+    height: 100%;
+    max-width: 99%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.3vw;
+  }
+  body #fotoSalaRetrato picture img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translatex(-50%);
+  }
+  body #pic2 {
+    grid-area: pic2;
+  }
+  body #pic2 picture {
+    display: block;
+    height: 100%;
+    max-width: 99%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.3vw;
+  }
+  body #pic2 picture img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translatex(-50%);
+  }
+  body #complementoCariocaClean {
+    grid-area: comp1;
+    height: 27.506vw;
+    font-family: "open1";
+    line-height: 165%;
+    color: #0053A3;
+    font-size: 0.886vw;
+    border: 0.02vw solid grey;
+    position: relative;
+    overflow: auto;
+    height: auto;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  body #complementoCariocaClean a,
+  body #complementoCariocaClean b,
+  body #complementoCariocaClean strong {
+    color: rgb(0, 94.36400818, 112);
+    font-family: "open2";
+  }
+  body #form {
+    grid-area: form;
+    font-family: "open1";
+    line-height: 165%;
+    color: #0053A3;
+    font-size: 0.886vw;
+    border: 0.02vw solid grey;
+    position: relative;
+    overflow: auto;
+    height: auto;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 27.506vw;
+    background-color: #dbe1e6;
+    color: #0053A3;
+    color: #0053A3;
+  }
+  body #form a,
+  body #form b,
+  body #form strong {
+    color: rgb(0, 94.36400818, 112);
+    font-family: "open2";
+  }
+  body #form #form {
+    position: absolute;
+    top: 2.208vw;
+    left: 44.615vw;
+    width: 26vw;
+    height: 23.09vw;
+    background-color: white;
+    box-shadow: 0.633vw 0.633vw rgba(0, 0, 0, 0.288);
+    border-radius: 0.58vw;
+    overflow: hidden;
+  }
+  body #form #form form {
+    min-height: 100%;
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    position: absolute;
+    top: 4.964vw;
+    left: 2.109vw;
+    width: 22vw;
+  }
+  body #form #form form p {
+    text-transform: capitalize;
+    all: unset;
+    margin-bottom: 1.055vw;
+  }
+  body #form #form form p .wpcf7-submit {
+    border: 1px solid #0053A3;
+    background-color: #0053A3;
+    color: white;
+    padding-left: 1.439vw;
+    padding-right: 1.439vw;
+    padding-top: 0.693vw;
+    padding-bottom: 0.693vw;
+    border-radius: 1.865vw;
+    font-size: 0.896vw;
+  }
+  body #form #form form p label {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  body #form #form form p label span {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    display: block;
+  }
+  body #form #form form p label span input {
+    flex: 1;
+    width: auto;
+    width: 100%;
+    border-radius: 0.316vw;
+    border: 0.053vw solid #0053A3;
+    height: 2.794vw;
+  }
+  body #form #form form p label br {
+    display: none;
+  }
+  body #form h2 {
+    position: absolute;
+    font-family: "open2";
+    text-transform: uppercase;
+    font-size: 1.477vw;
+    line-height: 159%;
+    width: 41.451vw;
+    top: 8.389vw;
+  }
+  body #form p {
+    position: absolute;
+    top: 13.517vw;
+    font-size: 0.899vw;
+    line-height: 159%;
+    width: 41.451vw;
+  }
+  body #map {
+    grid-area: map;
+    font-family: "open1";
+    line-height: 165%;
+    color: #0053A3;
+    font-size: 0.886vw;
+    border: 0.02vw solid grey;
+    position: relative;
+    overflow: auto;
+    height: auto;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 22.922vw;
+    background-color: rgb(207, 207, 207);
+    overflow: hidden;
+    position: relative;
+  }
+  body #map a,
+  body #map b,
+  body #map strong {
+    color: rgb(0, 94.36400818, 112);
+    font-family: "open2";
+  }
+  body #map #AddresMap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 59.834vw;
+    height: 22.922vw;
+  }
+  body #map #AddresMap iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  body #map #text {
+    position: absolute;
+    left: 59.789vw;
+    width: 39.189vw;
+    height: 22.922vw;
+    background-color: white;
+    top: 0;
+  }
+  body #map #text h3 {
+    position: absolute;
+    top: 6.233vw;
+    left: 5.282vw;
+    font-size: 2.267vw;
+    font-family: "open2";
+    text-shadow: 0.264vw 0.264vw hsla(0, 0%, 64%, 0.5);
+  }
+  body #map #text #addrHq {
+    position: absolute;
+    top: 11.401vw;
+    left: 4.799vw;
+  }
+  body #map #text #phone {
+    position: absolute;
+    top: 13.566vw;
+    left: 4.799vw;
+  }
+  body footer {
+    grid-area: foot;
+  }
+}
+/*****************************************************/
+@keyframes hoverElement {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.8) rotate(3deg);
+    filter: blur(1px);
+    z-index: 30000;
+  }
+  100% {
+    transform: scale(1.2);
+    z-index: 30000;
+  }
+}
+.LinksCq {
+  container-type: inline-size;
+  container-name: pedaco;
+  padding: 1rem;
+  box-sizing: border-box;
+  max-width: 1900px;
+  /**************************************************/
+  /**************************************************/
+  /**************************************************/
+  /**************************************************/
+}
+.LinksCq #conteudo {
+  width: 100%;
+}
+@container pedaco (min-width: 401px) {
+  .LinksCq #conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.426vw;
+  }
+  .LinksCq #conteudo .linkIcon {
+    all: unset;
+  }
+  .LinksCq #conteudo a {
+    background-color: #EAB640;
+    padding-left: 1.424vw;
+    padding-right: 1.424vw;
+    padding-top: 0.685vw;
+    padding-bottom: 0.685vw;
+    font-size: 0.896vw;
+    font-family: "open2";
+    border-radius: 1.845vw;
+  }
+  .LinksCq #conteudo h2 {
+    font-size: 2.267vw;
+    text-shadow: 0.264vw 0.264vw rgba(0, 0, 0, 0.261);
+  }
+  .LinksCq #conteudo ul {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 3vw;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .LinksCq #conteudo ul li img {
+    height: 6vw;
+    width: auto;
+  }
+}
+@container pedaco (min-width: 10px) and (max-width:400) {
+  .LinksCq #conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.426vw;
+  }
+  .LinksCq #conteudo a {
+    background-color: #EAB640;
+    padding-left: 1.424vw;
+    padding-right: 1.424vw;
+    padding-top: 0.685vw;
+    padding-bottom: 0.685vw;
+    font-family: "open2";
+    border-radius: 1.845vw;
+  }
+  .LinksCq #conteudo h2 {
+    text-shadow: 0.264vw 0.264vw rgba(0, 0, 0, 0.261);
+  }
+  .LinksCq #conteudo ul {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 7vw;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .LinksCq #conteudo ul li img {
+    height: 12vw;
+    width: auto;
+  }
+}/*# sourceMappingURL=page.css.map */

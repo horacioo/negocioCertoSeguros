@@ -1,0 +1,15 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia" as t;
+@use "../../../css/util/_vw.scss";
+@use "../../../css/util/padding_Generico" as p;
+
+@include breakpoints.respond-to(mobile) {
+    #blog {
+      
+    }
+}

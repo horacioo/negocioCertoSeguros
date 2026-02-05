@@ -1,0 +1,32 @@
+@import "./../cores/cores";
+
+:has(.wpcf7-not-valid-tip) {
+    position: relative;
+}
+.wpcf7-not-valid-tip {
+    position: absolute;
+    z-index: 300000;
+    bottom: -2vw;
+    background-color: #323b57;
+    border: none !important;
+    color: #fff !important;
+    padding: 1vw;
+    right: -6vw;
+    text-transform: capitalize;
+}
+
+:has(.wpcf7-response-output) {
+    position: relative;
+}
+.wpcf7-response-output {
+    position: absolute;
+    bottom: 3vw;
+    width: 100%;
+    background-color: $cor1;
+    border: none !important;
+    color: white;
+    left: -0.38125vw;
+    padding: 5vw;
+    display: block;
+    text-transform: capitalize;
+}

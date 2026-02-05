@@ -1,0 +1,72 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    @keyframes hoverDif {
+        0% {
+            background-color: cores.$cor1;
+            z-index: 20;
+            transform: none;
+            color: cores.$cor2;
+        }
+        100% {
+            background-color: lighten(adjust-hue(cores.$cor1, -90deg), 50%);
+            z-index: 60;
+            transform: scale(1.2);
+            color: cores.$cor1;
+            $x: vw.vw(10);
+            $x2: vw.vw(1);
+            box-shadow: $x $x $x2 rgba(0, 0, 0, 0.568);
+            border: vw.vw(1) solid cores.$cor1;
+        }
+    }
+
+    #diferenciais {
+        z-index: 25;
+        font-family: "font1";
+        width: vw.vw(696.91);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        h2 {
+            color: cores.$cor1;
+            font-size: vw.vw(21.99);
+            margin-bottom: vw.vw(29.28);
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: vw.vw(32.19);
+            li {
+                h3 {
+                    font-size: vw.vw(10.89);
+                }
+                background-color: cores.$cor1;
+                color: cores.$cor2;
+                padding-left: vw.vw(16.06);
+                padding-right: vw.vw(16.06);
+                padding-top: vw.vw(18.15);
+                padding-bottom: vw.vw(18.15);
+                border-radius: vw.vw(3.49);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: vw.vw(8.72);
+                font-size: vw.vw(8.1);
+                line-height: 143%;
+
+                &:hover {
+                    animation: "hoverDif" 200ms forwards;
+                }
+            }
+        }
+         margin-bottom: vw.vw(70.93);
+    }
+}

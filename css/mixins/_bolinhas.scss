@@ -1,0 +1,50 @@
+
+@mixin bolinhas(){
+    position: absolute;
+    z-index: 300000000000000;
+    display: inline-block;
+    opacity: 0.4;
+    ///transform: rotateZ(90deg);
+    position: relative;
+    div{
+        background-color: $cor1;
+        width: 0.68828125vw;
+        height: 0.68828125vw;
+        margin-bottom: 2px;
+        border-radius: 0.9765625vw;
+        position: relative;
+        opacity: 0;
+    }
+    div:nth-child(1){
+        animation: BolinhasComeIn 2000ms infinite;
+        animation-delay: 0ms;
+    }
+    div:nth-child(2){
+        animation: BolinhasComeIn 2500ms infinite;
+        animation-delay: 1000ms;
+    }
+    div:nth-child(3){
+        animation: BolinhasComeIn 3000ms infinite;
+        animation-delay: 2000ms;
+    }
+    div:nth-child(4){
+        animation: BolinhasComeIn 3500ms infinite;
+        animation-delay: 3000ms;
+    }
+    div:nth-child(5){
+        animation: BolinhasComeIn 4000ms infinite;
+        animation-delay: 4000ms;
+    }
+}
+
+@keyframes piscando {
+    0%{opacity: 0.2;  }
+   // 50%{opacity: 0.5;}
+    100%{opacity: 0.1; }
+}
+
+@keyframes BolinhasComeIn {
+    0%{opacity: 0; top: 30px;}
+    80%{opacity: 1; top: 0;}
+    100%{opacity: 0; top: -30px;}
+}

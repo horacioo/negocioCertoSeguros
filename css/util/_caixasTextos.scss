@@ -1,0 +1,8 @@
+@use "../util/vw";
+
+@mixin caixasTextos() {
+    ///border: 1px solid rgb(0, 75, 75);
+    display: flex;
+    flex-direction: column;
+    gap: vw.vw(15.11);
+} 

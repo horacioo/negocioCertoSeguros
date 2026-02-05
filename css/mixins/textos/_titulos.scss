@@ -1,0 +1,50 @@
+//@use "fontFace";
+@use "../../cores/cores" as cores;
+//@use "../../util/_vw.scss";
+
+@mixin titulos() {
+    font-family: "open2" !important;
+    text-shadow: 0.4vw 0.4vw rgba(0, 0, 0, 0.3);
+
+    text-align: center;
+    color:cores.$cor1;
+
+    @media screen and (min-width: 769px) {
+        font-size: 3.873046875vw;
+        font-family: "font1";
+        line-height: 100%;
+        font-weight: 100;
+
+        strong { 
+            font-size: 4.3369140625vw;
+            font-weight: bolder;
+            font-family: "font2";
+            display: block;
+        }
+        color: cores.$cor1;
+        width: 42.013671875vw;
+        display: block;
+        margin: 0;
+        @content;
+    }
+
+    @media screen and (max-width: 499px) {
+        font-size: 8.873046875vw;
+        font-family: "font1";
+        line-height: 166%;
+        font-weight: 100;
+        width: 100%;
+        display: block;
+        padding-bottom: 5vw;
+        strong {
+            font-size: 8.3369140625vw;
+            font-weight: bolder;
+            font-family: "font2";
+            display: inline-block;
+        }
+        color: cores.$cor1;
+        display: block;
+        margin: 0;
+        @content;
+    }
+}

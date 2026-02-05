@@ -1,0 +1,120 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia" as t;
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(mobile) {
+    /****************************************************************************/
+    @keyframes AbreMenu {
+        0% {
+            opacity: 0.1;
+            left: -100%;
+        }
+
+        100% {
+            opacity: 1;
+            left: 0vw;
+        }
+    }
+    .LeftToRight {
+        animation: AbreMenu 700ms forwards;
+    }
+    /****************************************************************************/
+    @keyframes monstraBtn {
+        0% {
+            filter: blur(3px);
+            color: yellow;
+            position: relative;
+            opacity: 0;
+            left: -30vw;
+        }
+        100% {
+            position: relative;
+            color: red;
+            left: 0vw;
+            opacity: 1;
+            filter: blur(0px);
+        }
+    }
+    .mostraBtn {
+        animation: monstraBtn 500ms forwards;
+    }
+    /****************************************************************************/
+   @keyframes fundoMenu{
+    0%{opacity: 0; left: -100vw; backdrop-filter: blur(0px) saturate(1) ;  } 
+    10%{opacity: 1;  left: 0vw; backdrop-filter: blur(0px) saturate(1); }
+    100%{opacity: 1;  left: 0vw; backdrop-filter: blur(2px) saturate(1.2); }
+   }
+    .openFundoCSS {
+    position: fixed;
+    width: 100vw;
+    height: 100vh; 
+    left: -100vw;
+    top:0;
+    background-color: rgba(255, 255, 255, 0);
+    animation: fundoMenu 800ms forwards;
+    z-index: 12000;
+    }
+    /****************************************************************************/
+
+    #hamburguer {
+        display: block;
+        z-index: 20000;
+        position: fixed;
+        top: 3vw;
+        left: 3vw;
+        padding: 3vw;
+        width: 12vw;
+        height: 12vw;
+        border: 1px solid cores.$cor1;
+        background-color: white;
+        border-radius: 1vw;
+        box-shadow: 1vw 1vw 1vw rgba(0, 0, 0, 0.504);
+        img {
+            width: 3vw;
+            height: 3vw;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    #menu {
+        z-index: 30000;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.643);
+        padding: 4vw;
+        height: 100vh;
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 4vw;
+            li {
+                opacity: 0;
+                border: 1px solid cores.$cor1;
+                padding: 2vw;
+                text-align: center;
+                white-space: nowrap;
+                margin-bottom: 3vw;
+                background-color: white;
+                border-radius: 1vw;
+                a {
+                    @include t.tamanhoFontes() {
+                        color: cores.$cor1;
+                        font-family: "open1";
+                    }
+                }
+            }
+        }
+
+        display: none;
+    }
+}

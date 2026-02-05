@@ -1,0 +1,67 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+
+    @keyframes Cta {
+        0%   { background-color: cores.$cor2;}
+        50% { background-color: lighten(adjust-hue(cores.$cor2,-20deg),1%);  }
+        100% { background-color: cores.$cor2;}
+    }  
+    #topo {
+        font-family: "font1";
+        height: vw.vw(206.84);
+        width: 100vw;
+        display: block;
+        background-color: cores.$cor1;
+        position: relative;
+        h2 {
+            width: vw.vw(519);
+            font-size: vw.vw(16.26);
+            line-height: 143%;
+            color: white;
+            top: vw.vw(35.95);
+            left: vw.vw(63.04);
+            position: absolute;
+        }
+        p {
+            position: absolute;
+            left: vw.vw(63.04);
+            top: vw.vw(125.04);
+            width: vw.vw(519.96);
+            line-height: 143%;
+            font-size: vw.vw(11.05);
+            color: white;
+        }
+
+        .cta{
+            background-color: cores.$cor2;
+            position: absolute;
+            left: vw.vw(683.03);
+            top: vw.vw(83.88);
+            min-height: vw.vw(71.78);
+            line-height: 142%;
+            font-size: vw.vw(14.17);
+            display: flex;
+            gap: vw.vw(27.09);
+            min-width: vw.vw(254.25);
+            border-radius: vw.vw(5.21);
+            padding-top: vw.vw(15.63);
+            padding-bottom: vw.vw(15.63);
+            padding-left: vw.vw(15.63);
+            padding-right: vw.vw(15.63);
+            animation: 'Cta' 1700ms infinite; 
+            a{
+                color: cores.$cor1;
+                font-weight: bolder;
+                max-width: vw.vw(160.47);
+            }
+        }
+    }
+}

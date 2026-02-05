@@ -1,0 +1,140 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+    #topo {
+        background-color: red;
+        height: vw.vw(401.75);
+        background-color: #4ba8ff4b;
+        position: relative;
+        background-image: url(#{c.$url}wp-content/themes/cariocaclean/partes/header/imagens/fundao.webp);
+        background-size: cover;
+
+        #fundoAzul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: vw.vw(118.78);
+            background: linear-gradient(cores.$cor1, rgba(255, 255, 0, 0));
+        }
+
+        #logo {
+            position: absolute;
+            left: vw.vw(440.5);
+            top: vw.vw(34.96);
+            width: vw.vw(119);
+            height: vw.vw(153.78);
+            display: flex;
+            flex-direction: column;
+            color: white;
+            align-items: center;
+            img {
+                display: block;
+                width: vw.vw(68.77);
+                height: vw.vw(70.33);
+                margin-bottom: vw.vw(23.44);
+                /**********************************************/
+                position: absolute; /******dia 27/10/2025******/
+                left: -43vw;        /******dia 27/10/2025******/
+                top: 2vw;           /******dia 27/10/2025******/
+                /**********************************************/
+            }
+            h1 {
+                font-family: "open2";
+                font-size: vw.vw(31.78);
+                text-align: center;
+                line-height: 95%;
+            }
+        }
+
+        h2 {
+            position: absolute;
+            left: vw.vw(201.48);
+            top: vw.vw(222.03);
+            text-align: center;
+            background-color: cores.$cor1;
+            width: vw.vw(597.04);
+            height: 10.591vw;
+            display: block;
+            border-radius: vw.vw(8.34);
+            color: white;
+            padding: 0;
+            margin: 0;
+
+            #tit1 {
+                position: absolute;
+                left: vw.vw(52.52);
+                top: vw.vw(15.63);
+                font-size: vw.vw(20.01);
+                font-family: "open1";
+                font-weight: normal;
+                line-height: 100%;
+                width: vw.vw(492);
+                margin-bottom: vw(3.65);
+                text-align: center;
+            }
+            #tit2 {
+                position: absolute;
+                left: vw.vw(158.54);
+                top: vw.vw(44.28);
+                font-size: vw.vw(20.53);
+                width: vw.vw(278);
+                font-family: "open1";
+                font-weight: normal;
+                height: vw.vw(26);
+                text-align: center;
+                line-height: 100%;
+            }
+            #tit3 {
+                position: absolute;
+                left: vw.vw(158.54);
+                top: 7.5vw;
+                font-size: vw.vw(16.53);
+                width: vw.vw(278);
+                font-family: "open1";
+                font-weight: normal;
+                height: vw.vw(26);
+                text-align: center;
+                line-height: 100%;
+            }
+        }
+
+        #button {
+            position: absolute;
+            top: vw.vw(339.24);
+            left: vw.vw(376.79);
+            width: vw.vw(246.42);
+            height: vw.vw(27.55);
+            display: flex;
+            gap: vw.vw(43.24);
+            justify-content: center;
+            align-items: center;
+            a {
+                position: relative;
+                top: 0;
+                padding-top: vw.vw(5.21);
+                padding-bottom: vw.vw(5.21);
+                padding-left: vw.vw(14.07);
+                padding-right: vw.vw(14.07);
+                background-color: white;
+                font-family: "open1";
+                font-weight: normal;
+                color: cores.$cor1;
+                font-size: vw.vw(10.42);
+                border-radius: vw.vw(18.24);
+                height: vw.vw(23.55);
+            }
+            a:nth-of-type(2) {
+                background-color: cores.$cor1;
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+@use "sass:math";
+@forward "./../../../css/reset/reset";
+@use "./../../../css/variaveis/caminhos" as c;
+@use "./../../../css/util/breakpoints";
+@use "./../../../css/cores/cores" as cores;
+@use "./../../../css/mixins/button" as btn;
+@use "../../../css/mixins/tipografia";
+@use "../../../css/util/_vw.scss";
+
+@include breakpoints.respond-to(bigger) {
+
+
+   
+
+    @keyframes hoverBtn {
+        0% {
+            background-color: cores.$cor1;
+            color: white;
+        }
+        40% {
+            z-index: 4000;
+            background-color: adjust-hue(cores.$cor2, -10deg);
+            color: cores.$cor1;
+            transform: scale(1.4);
+        }
+        100% {
+            background-color: cores.$cor2;
+            color: cores.$cor1;
+        }
+    }
+
+    #faq {
+        .ativo {
+            display: block !important;
+            height: auto !important;
+            background-color: lighten(cores.$cor1,0%);
+            color: cores.$cor2;
+            [itemprop="acceptedAnswer"] {
+                p {
+                    display: block !important;
+                    color: cores.$cor2;
+                }
+            }
+        }
+
+        z-index: 20;
+        font-family: "font1";
+        width: vw.vw(696.91);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 26vw;
+
+        form {
+            display: block;
+            width: vw.vw(343.34);
+            position: absolute;
+            top: vw.vw(30.91);
+            right: 0;
+
+            input {
+                padding-left: vw.vw(11.18);
+                padding-right: vw.vw(11.18);
+                display: inline-block;
+                color: cores.$cor1;
+                width: 99%;
+                height: vw.vw(22.6);
+                border-radius: vw.vw(3.31);
+                font-size: vw.vw(11.27);
+                font-weight: bold;
+                border: vw.vw(1) solid cores.$cor1;
+                outline-color: cores.$cor1;
+            }
+        }
+
+        h2 {
+            color: cores.$cor1;
+            font-size: vw.vw(21.99);
+            margin-bottom: vw.vw(29.28);
+        }
+        #apresentacao {
+            color: cores.$cor1;
+            width: vw.vw(254.77);
+            line-height: 140%;
+            font-size: vw.vw(8.22);
+            text-align: justify;
+        }
+
+
+        #imgFaq {
+            position: absolute;
+            top: vw.vw(20);
+            left: vw.vw(295.18);
+            height: vw.vw(215.17);
+            width: auto;
+        }
+
+
+        #atalhosFaq {
+            //border: 1px  solid red;
+            width: vw.vw(251.54);
+            height: vw.vw(74.66);
+            position: absolute;
+            top: 13.578vw;
+
+            div {
+                background-color: cores.$cor1;
+                color: white;
+                display: inline-block;
+                padding-top: vw.vw(3.87);
+                padding-bottom: vw.vw(3.87);
+                padding-left: vw.vw(11.6);
+                padding-right: vw.vw(11.6);
+                margin: vw.vw(2);
+                border-radius: vw.vw(3.6);
+                text-transform: capitalize;
+                font-size: vw.vw(7.43);
+                &:hover {
+                    animation: "hoverBtn" 400ms forwards;
+                }
+            }
+        }
+
+        #perguntas-e-respostas {
+            color: cores.$cor1;
+            width: vw.vw(343.34);
+            display: block;
+            overflow: hidden;
+            display: grid;
+            gap: vw.vw(4.32);
+            position: absolute;
+            right: 0;
+            top: vw.vw(57.83);
+            max-height: vw.vw(182.71);
+            overflow: scroll;
+            overflow-x: hidden;
+            border-bottom: 1px solid cores.$cor1;
+            padding: 0.2vw;
+            padding-bottom: vw.vw(12);
+
+            li {
+                width: 99%;
+                height: vw.vw(22.6);
+
+                border: vw.vw(1) solid grey;
+                border-radius: vw.vw(3.31);
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-left: vw.vw(11.18);
+                padding-right: vw.vw(11.18);
+                padding-top: vw.vw(5);
+                padding-bottom: vw.vw(5);
+                overflow: hidden;
+                font-size: vw.vw(7.43);
+                /**********************************/
+                [itemprop="acceptedAnswer"] {
+                    ////display: none;
+                    margin-top: 0.7vw;
+                    line-height: 160%;
+                    color: cores.$cor1;
+                }
+                /**********************************/
+            }
+        }
+    }
+}
