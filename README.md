@@ -22,6 +22,7 @@ Atualmente, trabalho com uma abordagem consultiva que une:
 ---
 ### 🔗 Conecte-se comigo
 * **Website Oficial:** [https://planet1.com.br](https://planet1.com.br)
+* **Link do projeto:** [https://negociocertoseguros.com.br/](https://negociocertoseguros.com.br/)
 * **LinkedIn:** [https://www.linkedin.com/in/hor%C3%A1cio-neto-89659a124/]
 
 > "Transformando tecnologia em resultados comerciais desde 2005."
